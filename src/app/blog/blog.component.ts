@@ -35,11 +35,15 @@ export class BlogComponent implements OnInit, OnDestroy {
       if (params['tag']) {
         this.tag = params['tag'];
         this.category = null;
+      } else {
+        this.tag = null;
       }
 
       if (params['category']) {
         this.category = params['category'];
         this.tag = null;
+      } else {
+        this.category = null;
       }
 
       this.getPage(+params['page'] || 1);
